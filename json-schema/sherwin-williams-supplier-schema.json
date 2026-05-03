@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/sherwin-williams/blob/main/json-schema/sherwin-williams-supplier-schema.json",
+  "title": "Sherwin-Williams Supplier",
+  "description": "A Sherwin-Williams supplier or trading partner in the B2B ecosystem",
+  "type": "object",
+  "properties": {
+    "supplierId": {
+      "type": "string",
+      "description": "Unique supplier identifier"
+    },
+    "supplierName": {
+      "type": "string",
+      "description": "Legal name of the supplier company"
+    },
+    "duns": {
+      "type": "string",
+      "description": "Dun & Bradstreet DUNS number"
+    },
+    "taxId": {
+      "type": "string",
+      "description": "Tax identification number"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Active", "Pending", "Inactive", "Suspended"],
+      "description": "Supplier account status"
+    },
+    "category": {
+      "type": "string",
+      "description": "Supplier category (raw materials, packaging, services, etc.)"
+    },
+    "contact": {
+      "type": "object",
+      "description": "Primary contact for the supplier",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "address": {
+      "type": "object",
+      "description": "Supplier primary address",
+      "properties": {
+        "street1": { "type": "string" },
+        "street2": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "country": { "type": "string" }
+      }
+    },
+    "ediCapabilities": {
+      "type": "array",
+      "description": "Supported EDI transaction types",
+      "items": {
+        "type": "string",
+        "enum": ["850", "855", "856", "810", "820", "832"]
+      }
+    },
+    "apiIntegrations": {
+      "type": "array",
+      "description": "Supported API integration types",
+      "items": {
+        "type": "string"
+      }
+    },
+    "paymentTerms": {
+      "type": "string",
+      "description": "Payment terms (Net 30, Net 60, etc.)"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Default currency for transactions"
+    },
+    "certifications": {
+      "type": "array",
+      "description": "Supplier certifications and qualifications",
+      "items": {
+        "type": "string"
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["supplierId", "supplierName", "status"]
+}

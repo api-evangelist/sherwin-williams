@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/sherwin-williams/blob/main/json-schema/sherwin-williams-product-schema.json",
+  "title": "Sherwin-Williams Paint Product",
+  "description": "A Sherwin-Williams paint or coatings product",
+  "type": "object",
+  "properties": {
+    "productId": {
+      "type": "string",
+      "description": "Unique product identifier"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock keeping unit identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name (e.g., Sherwin-Williams, Valspar, Minwax)"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category (interior paint, exterior paint, stain, etc.)"
+    },
+    "colorCode": {
+      "type": "string",
+      "description": "Sherwin-Williams color code (e.g., SW 7015)"
+    },
+    "colorName": {
+      "type": "string",
+      "description": "Color name (e.g., Repose Gray)"
+    },
+    "colorFamily": {
+      "type": "string",
+      "description": "Color family classification"
+    },
+    "hexCode": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Hex color code approximation"
+    },
+    "rgb": {
+      "type": "object",
+      "description": "RGB color values",
+      "properties": {
+        "r": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "g": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "b": { "type": "integer", "minimum": 0, "maximum": 255 }
+      }
+    },
+    "finish": {
+      "type": "string",
+      "enum": ["Flat", "Matte", "Eggshell", "Satin", "Semi-Gloss", "Gloss", "High-Gloss"],
+      "description": "Paint finish type"
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Coverage area information",
+      "properties": {
+        "minSqFt": { "type": "number" },
+        "maxSqFt": { "type": "number" },
+        "unit": { "type": "string" }
+      }
+    },
+    "coats": {
+      "type": "integer",
+      "description": "Recommended number of coats"
+    },
+    "dryTime": {
+      "type": "object",
+      "description": "Drying time specifications",
+      "properties": {
+        "touchDryMinutes": { "type": "integer" },
+        "recoatHours": { "type": "integer" }
+      }
+    },
+    "application": {
+      "type": "string",
+      "description": "Application method (brush, roller, sprayer)"
+    },
+    "substrate": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Compatible substrates"
+    },
+    "base": {
+      "type": "string",
+      "description": "Paint base (Extra White, Deep Base, etc.)"
+    },
+    "size": {
+      "type": "object",
+      "description": "Available container sizes",
+      "properties": {
+        "volume": { "type": "number" },
+        "unit": { "type": "string", "enum": ["gallon", "quart", "pint", "liter"] }
+      }
+    },
+    "price": {
+      "type": "number",
+      "format": "float",
+      "description": "Retail price"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code"
+    },
+    "upc": {
+      "type": "string",
+      "description": "Universal Product Code"
+    },
+    "inStock": {
+      "type": "boolean",
+      "description": "Whether the product is in stock"
+    }
+  },
+  "required": ["productId", "name", "brand", "category"]
+}

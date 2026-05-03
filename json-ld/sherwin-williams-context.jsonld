@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sw": "https://www.sherwin-williams.com/schema/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "PaintProduct": "schema:Product",
+    "ColorSwatch": "sw:ColorSwatch",
+    "Supplier": "schema:Organization",
+    "PurchaseOrder": "schema:Order",
+    "Invoice": "schema:Invoice",
+
+    "productId": "schema:identifier",
+    "sku": "schema:sku",
+    "name": "schema:name",
+    "brand": "schema:brand",
+    "category": "schema:category",
+    "colorCode": "sw:colorCode",
+    "colorName": "sw:colorName",
+    "colorFamily": "sw:colorFamily",
+    "hexCode": "sw:hexColor",
+    "rgb": "sw:rgbValue",
+
+    "finish": "sw:paintFinish",
+    "coverage": "sw:coverage",
+    "coats": { "@id": "sw:recommendedCoats", "@type": "xsd:integer" },
+    "dryTime": "sw:dryingTime",
+    "application": "sw:applicationMethod",
+    "substrate": "sw:substrate",
+    "base": "sw:paintBase",
+    "size": "schema:size",
+
+    "price": { "@id": "schema:price", "@type": "xsd:float" },
+    "currency": "schema:priceCurrency",
+    "upc": "schema:gtin12",
+    "inStock": "schema:availability",
+
+    "supplierId": "schema:identifier",
+    "supplierName": "schema:legalName",
+    "duns": "schema:duns",
+    "taxId": "schema:taxID",
+    "status": "schema:status",
+    "contact": { "@id": "schema:contactPoint", "@type": "schema:ContactPoint" },
+    "address": { "@id": "schema:address", "@type": "schema:PostalAddress" },
+
+    "ediCapabilities": "sw:ediTransactionTypes",
+    "apiIntegrations": "sw:apiIntegrationTypes",
+    "paymentTerms": "schema:paymentAccepted",
+    "certifications": "schema:hasCredential",
+
+    "street1": "schema:streetAddress",
+    "city": "schema:addressLocality",
+    "state": "schema:addressRegion",
+    "postalCode": "schema:postalCode",
+    "country": "schema:addressCountry",
+
+    "createdAt": { "@id": "schema:dateCreated", "@type": "xsd:dateTime" },
+    "updatedAt": { "@id": "schema:dateModified", "@type": "xsd:dateTime" }
+  }
+}

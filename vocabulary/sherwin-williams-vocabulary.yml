@@ -1,0 +1,129 @@
+title: Sherwin-Williams Vocabulary
+description: Domain vocabulary for Sherwin-Williams products, colors, supply chain, and B2B integrations
+provider: Sherwin-Williams
+version: '2026-05-02'
+source: https://www.sherwin-williams.com/
+
+terms:
+  - term: Paint
+    definition: >-
+      A liquid coating product applied to surfaces for protection, decoration, or
+      functional purposes. Sherwin-Williams produces interior and exterior paints
+      across multiple product lines and price tiers.
+    type: concept
+    related: [Coating, Finish, Base, Color]
+
+  - term: Color Code
+    definition: >-
+      Sherwin-Williams proprietary color identification number in the format "SW XXXX"
+      (e.g., SW 7015 Repose Gray). Each color has a unique code, name, and associated
+      RGB/hex values.
+    type: concept
+    related: [Color, ColorSwatch]
+
+  - term: Color Family
+    definition: >-
+      A grouping of paint colors by hue (e.g., Red, Blue, Gray, Neutral, White).
+      Used for browsing and filtering paint colors in the Sherwin-Williams color system.
+    type: concept
+    values: [Red, Orange, Yellow, Green, Blue, Purple, Neutral, White, Gray, Black, Brown, Beige]
+
+  - term: Paint Finish
+    definition: >-
+      The sheen level of a dried paint surface. Different finishes are appropriate
+      for different applications and surfaces.
+    type: enum
+    values:
+      Flat: No sheen, hides surface imperfections, good for ceilings
+      Matte: Very low sheen, washable, good for living areas
+      Eggshell: Low sheen, good for walls, easy to clean
+      Satin: Medium sheen, good for bathrooms and kitchens
+      Semi-Gloss: Higher sheen, good for trim, doors, cabinets
+      Gloss: High sheen, very durable, good for furniture
+      High-Gloss: Maximum sheen, highest durability
+
+  - term: Paint Base
+    definition: >-
+      The tint base type used to achieve different color depths. Extra White base
+      is used for light colors, Deep Base for dark colors, and Ultradeep for the
+      darkest colors.
+    type: concept
+    values: [Extra White, White, Light, Medium, Deep, Ultradeep]
+
+  - term: ColorSnap
+    definition: >-
+      Sherwin-Williams color matching and visualization technology. ColorSnap mobile
+      apps allow consumers and professionals to match colors from photos and visualize
+      colors on walls using augmented reality.
+    type: concept
+
+  - term: LRV (Light Reflectance Value)
+    definition: >-
+      A measurement of how much light a paint color reflects. LRV ranges from 0
+      (pure black, absorbs all light) to 100 (pure white, reflects all light).
+      Important for interior design and lighting planning.
+    type: concept
+    related: [Color]
+
+  - term: VOC (Volatile Organic Compounds)
+    definition: >-
+      Chemical compounds in paint that evaporate at room temperature. Low-VOC and
+      zero-VOC paints are preferred for indoor air quality and environmental compliance.
+    type: concept
+    related: [Paint]
+
+  - term: Supplier Portal
+    definition: >-
+      The Sherwin-Williams online portal for suppliers and trading partners to manage
+      purchase orders, invoices, compliance documentation, and supply chain operations.
+    type: concept
+
+  - term: EDI (Electronic Data Interchange)
+    definition: >-
+      Electronic document exchange standard used for B2B trading with Sherwin-Williams.
+      Supported transaction sets include 850 (Purchase Order), 855 (PO Acknowledgment),
+      856 (Advance Ship Notice), 810 (Invoice).
+    type: concept
+    related: [Supplier Portal]
+
+  - term: Purchase Order (850)
+    definition: >-
+      An EDI 850 transaction set representing a purchase order from Sherwin-Williams
+      to a supplier. Includes product SKUs, quantities, pricing, and delivery requirements.
+    type: concept
+    related: [EDI]
+
+  - term: Advance Ship Notice (856)
+    definition: >-
+      An EDI 856 transaction set sent by a supplier to notify Sherwin-Williams of
+      an incoming shipment. Contains shipping details, carrier information, and
+      item quantities.
+    type: concept
+    related: [EDI]
+
+  - term: DUNS Number
+    definition: >-
+      Dun & Bradstreet Data Universal Numbering System identifier. Used to uniquely
+      identify business entities in Sherwin-Williams supplier onboarding and EDI setup.
+    type: concept
+    related: [Supplier]
+
+  - term: Coverage
+    definition: >-
+      The area (in square feet or square meters) that one gallon of paint covers.
+      Typical coverage is 350-400 square feet per gallon for one coat on a smooth surface.
+    type: concept
+    related: [Paint]
+
+capabilities:
+  - name: B2B Supplier Integration
+    description: EDI and API integration for Sherwin-Williams supply chain operations
+    apis: [Supplier Portal, EDI Integration]
+
+  - name: Color Management
+    description: Access and use Sherwin-Williams color data and matching systems
+    related: [ColorSnap, Color Code]
+
+  - name: Product Data
+    description: Access product specifications, coverage, and technical data
+    related: [Paint, Technical Data Sheet]

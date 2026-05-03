@@ -1,0 +1,66 @@
+{
+  "example": "Supplier Purchase Order",
+  "description": "Example EDI 850 Purchase Order data structure for Sherwin-Williams suppliers",
+  "purchaseOrder": {
+    "poNumber": "PO-2026-SW-00456",
+    "poDate": "2026-05-02",
+    "deliveryDate": "2026-05-15",
+    "buyerInfo": {
+      "name": "The Sherwin-Williams Company",
+      "address": {
+        "street1": "101 West Prospect Avenue",
+        "city": "Cleveland",
+        "state": "OH",
+        "postalCode": "44115",
+        "country": "US"
+      }
+    },
+    "supplierInfo": {
+      "supplierId": "SW-SUPP-001234",
+      "name": "Example Chemicals Inc",
+      "address": {
+        "street1": "500 Industrial Blvd",
+        "city": "Houston",
+        "state": "TX",
+        "postalCode": "77001",
+        "country": "US"
+      }
+    },
+    "shipTo": {
+      "facilityId": "SW-MFG-ATL-001",
+      "name": "Sherwin-Williams Atlanta Manufacturing",
+      "address": {
+        "street1": "1000 Paint Way",
+        "city": "Atlanta",
+        "state": "GA",
+        "postalCode": "30301",
+        "country": "US"
+      }
+    },
+    "lineItems": [
+      {
+        "lineNumber": 1,
+        "sku": "TIO2-KRONOS-001",
+        "description": "Titanium Dioxide - Rutile Grade",
+        "quantity": 10000,
+        "unitOfMeasure": "KG",
+        "unitPrice": 3.45,
+        "totalPrice": 34500.00
+      },
+      {
+        "lineNumber": 2,
+        "sku": "RESIN-ALK-002",
+        "description": "Alkyd Resin Long Oil",
+        "quantity": 5000,
+        "unitOfMeasure": "KG",
+        "unitPrice": 4.20,
+        "totalPrice": 21000.00
+      }
+    ],
+    "orderTotal": 55500.00,
+    "currency": "USD",
+    "paymentTerms": "Net 60",
+    "specialInstructions": "Deliver to Receiving Dock B. Call 404-555-1234 upon arrival.",
+    "ediTransactionSet": "850"
+  }
+}

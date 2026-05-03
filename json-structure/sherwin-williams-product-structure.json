@@ -1,0 +1,32 @@
+{
+  "title": "Sherwin-Williams Product Structure",
+  "description": "Structural documentation for Sherwin-Williams paint and coatings products",
+  "type": "object",
+  "fields": {
+    "productId": { "type": "string", "description": "Unique product identifier" },
+    "sku": { "type": "string", "description": "Stock keeping unit" },
+    "name": { "type": "string", "description": "Product name", "example": "Emerald Interior Latex Paint" },
+    "brand": { "type": "string", "description": "Brand name", "example": "Sherwin-Williams" },
+    "category": { "type": "string", "description": "Product category", "example": "Interior Paint" },
+    "colorCode": { "type": "string", "description": "SW color code", "example": "SW 7015" },
+    "colorName": { "type": "string", "description": "Color name", "example": "Repose Gray" },
+    "colorFamily": { "type": "string", "description": "Color family", "example": "Gray" },
+    "hexCode": { "type": "string", "description": "Hex color approximation", "example": "#C2BFB8" },
+    "rgb": { "type": "object", "description": "RGB color values {r, g, b}" },
+    "finish": { "type": "enum", "values": ["Flat", "Matte", "Eggshell", "Satin", "Semi-Gloss", "Gloss", "High-Gloss"] },
+    "coverage": { "type": "object", "description": "Coverage area {minSqFt, maxSqFt, unit}" },
+    "coats": { "type": "integer", "description": "Recommended coats" },
+    "dryTime": { "type": "object", "description": "Drying times {touchDryMinutes, recoatHours}" },
+    "base": { "type": "string", "description": "Tint base", "example": "Extra White" },
+    "size": { "type": "object", "description": "Container size {volume, unit}" },
+    "price": { "type": "float", "description": "Retail price" },
+    "upc": { "type": "string", "description": "Universal Product Code" },
+    "inStock": { "type": "boolean", "description": "Availability status" }
+  },
+  "colorSystem": {
+    "description": "Sherwin-Williams uses SW XXXX color codes for proprietary colors",
+    "colorFamilies": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Neutral", "White", "Gray", "Black", "Brown", "Beige"],
+    "colorDatabase": "1700+ colors in the standard palette",
+    "matchingSystem": "ColorSnap technology for color matching"
+  }
+}

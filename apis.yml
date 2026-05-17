@@ -52,7 +52,7 @@ tags:
   - Paints
   - Retail
   - Supply Chain
-type: Contract
+kind: contract
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sherwin-Williams_logo.svg/2560px-Sherwin-Williams_logo.svg.png
 access: 3rd-Party
 created: '2025-03-01'
@@ -74,10 +74,10 @@ common:
   - url: https://www.sherwin-williams.com/home-builders/services/paint-technology-and-application
     type: Partner Program
   - url: https://www.sherwin-williams.com/legal/terms-of-use
-    type: Terms of Service
+    type: TermsOfService
   - url: https://www.sherwin-williams.com/legal/privacy-policy
-    type: Privacy Policy
+    type: PrivacyPolicy
   - url: https://github.com/sherwin-williams-co
-    type: GitHub Organization
+    type: GitHubOrganization
   - url: https://www.sherwin-williams.com
     type: Website

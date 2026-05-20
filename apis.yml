@@ -69,6 +69,8 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.19'
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sherwin-williams
   - url: https://suppliers.sherwin-williams.com/
     type: Supplier Portal
   - url: https://www.sherwin-williams.com/home-builders/services/paint-technology-and-application

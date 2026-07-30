@@ -53,6 +53,18 @@ tags:
   - Retail
   - Supply Chain
 kind: contract
+accessModel:
+  pricing: enterprise
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sherwin-Williams_logo.svg/2560px-Sherwin-Williams_logo.svg.png
 access: 3rd-Party
 created: '2025-03-01'

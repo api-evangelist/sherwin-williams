@@ -1,7 +1,9 @@
 ---
 title: Sherwin-Williams Launches App Powered by AI Technology
 url: https://www.pcimag.com/articles/112388-sherwin-williams-launches-app-powered-by-ai-technology
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Sherwin-Williams" press release artificial intelligence'
 position: 4
 source: serpapi-google

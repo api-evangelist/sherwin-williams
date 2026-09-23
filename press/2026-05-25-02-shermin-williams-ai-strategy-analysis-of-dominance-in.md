@@ -1,7 +1,9 @@
 ---
 title: 'Shermin-Williams'' AI Strategy: Analysis of Dominance in ...'
 url: https://www.klover.ai/shermin-williams-ai-strategy-analysis-of-dominance-in-coatings/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Sherwin-Williams" press release artificial intelligence'
 position: 2
 source: serpapi-google

@@ -79,7 +79,7 @@ accessModel:
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sherwin-Williams_logo.svg/2560px-Sherwin-Williams_logo.svg.png
 access: 3rd-Party
 created: '2025-03-01'
-modified: '2026-05-02'
+modified: '2026-10-06'
 position: Consuming
 description: >-
   The Sherwin-Williams Company is a global leader in the paint and coatings
@@ -92,6 +92,8 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.23'
 common:
+  - url: https://blog.sherwin-williams.com/feed/
+    type: BlogRSS
   - type: DomainSecurity
     url: security/sherwin-williams-domain-security.yml
   - type: LinkedIn
